@@ -1,0 +1,27 @@
+ [
+    {
+        "img": "/img/cat1.webp",
+        "text":"Adults Welcome"
+},
+{
+    "img": "/img/cat2.webp",
+    "text":"MARVEL"
+},
+{
+    "img": "/img/cat3.webp",
+    "text":"Эксклюзивная продукция"
+},
+{
+    "img": "/img/cat4.webp",
+    "text":"LEGO® Friends"
+},
+{
+    "img": "/img/cat5.webp",
+    "text":"Star Wars™"
+},
+{
+    "img": "/img/cat6.webp",
+    "text":"Harry Potter™"
+}
+
+]

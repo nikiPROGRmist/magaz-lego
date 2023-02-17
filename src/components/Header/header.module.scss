@@ -1,0 +1,55 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EAEAEA;
+
+
+
+
+
+}
+
+
+
+.headerLeft{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+
+    .text{
+        padding-left: 10px;
+
+    }
+
+    h1{
+        font-size: 25px;
+        margin: 0;
+        font-weight:900;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 15px;
+        margin: 0;
+
+
+    }
+}
+
+.headerRight{
+    margin: 20px;
+
+
+    ul{
+        display: flex;
+        align-items: center;
+    }
+    .header_1{
+        margin: 0 20px;
+    }
+
+    span{
+        margin: 0 20px 0 20px;
+    }
+}

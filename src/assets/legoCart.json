@@ -1,0 +1,66 @@
+[
+    {
+        "image":"/img/1.webp",
+        "product":"Эксклюзивная продукция",
+        "title":"«Титаник» LEGO®",
+        "price":"5990 руб"
+    },
+    {
+        "image":"/img/2.webp",
+        "product":"Эксклюзивная продукция",
+        "title":"«Титаник» LEGO®",
+        "price":"5990 руб"
+    },
+    {
+        "image":"/img/3.webp",
+        "product":"Эксклюзивная продукция",
+        "title":"«Титаник» LEGO®",
+        "price":"5990 руб"
+    },
+    {
+        "image":"/img/4.png",
+        "product":"Редкие товары",
+        "title":"AT-AT™",
+        "price":"5990 руб"
+    },
+    {
+        "image":"/img/6.webp",
+        "product":"Редкие товары",
+        "title":"Home Alone LEGO® Ideas",
+        "price":"5990 руб"
+    },
+    {
+        "image":"/img/7.jpeg",
+        "product":"Редкие товары",
+        "title":"Автомобиль Охотников за привидениями ECTO-1",
+        "price":"5990 руб"
+    },
+    {
+
+        "image":"/img/8.jpeg",
+        "product":"Редкие товары",
+        "title":"«Мстители: Финал» — решающая битва",
+        "price":"5990 руб"
+    },
+    {
+
+        "image":"/img/9.jpeg",
+        "product":"Редкие товары",
+        "title":"«Взлёт Домо» LEGO® Marvel",
+        "price":"5990 руб"
+    },
+    {
+
+        "image":"/img/10.jpeg",
+        "product":"Редкие товары",
+        "title":"Новогодний календарь «Мстители» LEGO® Marvel",
+        "price":"5990 руб"
+    },
+    {
+
+        "image":"/img/11.jpeg",
+        "product":"Редкие товары",
+        "title":"Нападение на мастерскую паука",
+        "price":"5990 руб"
+    }
+]
