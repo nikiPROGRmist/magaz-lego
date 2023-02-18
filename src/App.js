@@ -6,6 +6,7 @@ import { Categories } from "./components/Сategories/Categories";
 import Categoris from "./assets/Categoris.json";
 import legoCart from "./assets/legoCart.json";
 import { useState } from "react";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const [caregoris, setCategoris] = useState(0);
@@ -33,6 +34,7 @@ function App() {
             <Card image={obj.image} product={obj.product} title={obj.title} price={obj.price} />
           );
         })}
+        <Footer />
       </div>
     </div>
   );
