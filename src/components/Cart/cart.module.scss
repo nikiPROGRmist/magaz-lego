@@ -30,10 +30,42 @@
         right: 10px;
     }
 
+    .closeCart__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        border-radius: 8px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 4;
+    }
+
     .cart__items{
         width: 400px;
         max-width: 100%;
         margin: 50px auto 0;
+    }
+
+    .img__item{
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+        align-items: center;
+        width: 200px;
+        height: 320px;
+
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
     }
 
 
@@ -49,10 +81,49 @@
         text-align: center;
     }
 
+    .text{
+       text-align: center;
+       font-family: 'Inter';
+       font-style: normal;
+       font-weight: 500;
+       font-size: 16px;
+       line-height: 17px;
+       color: #000000;
+       margin: 10px auto;
+    }
+
+    .cart__price{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: #BDBDBD;
+        margin: 5px 20px ;
+    }
+
+    .price{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        margin: 0 20px;
+    }
+
+
+ .cart{
+        display: flex;
+        justify-content: center;
+}
+
+
 .cart__item{
-display: block;
-width: 220px;
-height: 320px;
+position: relative;
+width: 320px;
+height: 430px;
 background: #FFFFFF;
 border: 3px solid #F3F3F3;
 border-radius: 40px;
@@ -60,23 +131,49 @@ cursor: pointer;
 margin:  60px 5px 0;
 }
 
-
-
+.menu__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
 }
 
-.img__item{
+.cart__count{
     display: flex;
     justify-content: center;
     align-items: center;
+
+.plus{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #F2F2F2;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 320px;
-
-
-    img{
-        display: block;
-        width: 100%;
-        height: auto;
-    }
 }
+
+.minus{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count{
+margin: 0 10px;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 27px;
+letter-spacing: 0.01em;
+color: #000000;
+}
+
+}
+
+
+}
+
+
