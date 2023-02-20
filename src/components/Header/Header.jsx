@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../Header/header.module.scss";
 
-export const Header = () => {
+export const Header = ({ openCart }) => {
   return (
     <>
       <header>
@@ -26,7 +26,7 @@ export const Header = () => {
         </div>
         <div className={style.headerRight}>
           <ul>
-            <li>
+            <li onClick={openCart}>
               <svg
                 width="25"
                 height="25"
@@ -42,10 +42,9 @@ export const Header = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-            </li>
-            <li>
               <span>1205 руб</span>
             </li>
+
             <li>
               <svg
                 width="20"

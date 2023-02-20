@@ -6,7 +6,7 @@ export const Card = ({ image, product, title, price }) => {
     <div className={style.card__item}>
       <div className={style.img__item}>
         <img src={image} alt="" />
-        {/* <div className={style.favorite__btn}>
+        <div className={style.favorite__btn}>
           <svg
             width="15"
             height="14"
@@ -19,15 +19,15 @@ export const Card = ({ image, product, title, price }) => {
               fill="#FF8585"
             />
           </svg>
-        </div> */}
+        </div>
       </div>
       <div className={style.title}>{product}</div>
 
       <div className={style.text}>{title}</div>
       <div className={style.text__item}>
-        <div className={style.card}>
+        <div className={style.card__btn}>
           <svg
-            className={style.card__svg}
+            className={style.cart__svg}
             width="12"
             height="12"
             viewBox="0 0 12 12"

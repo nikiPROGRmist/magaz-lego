@@ -48,6 +48,10 @@ header{
     .header_1{
         margin: 0 20px;
     }
+    li{
+        display: flex;
+        align-items: center;
+    }
 
     span{
         margin: 0 20px 0 20px;

@@ -1,5 +1,6 @@
 import "./App.css";
 import { Card } from "./components/card/Card";
+import { Cart } from "./components/Cart/Cart";
 import { Header } from "./components/Header/Header";
 import { Sliders } from "./components/Slider/Slider";
 import { Categories } from "./components/Сategories/Categories";
@@ -10,9 +11,20 @@ import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const [caregoris, setCategoris] = useState(0);
+  const [onClickCart, setOnClickCart] = useState(false);
+  const [onClickClose, setOnClickClose] = useState(true);
+
+  const openCart = () => {
+    setOnClickCart(true);
+  };
+
+  const closeCart = () => {
+    setOnClickCart(false);
+  };
   return (
     <div className="wrapper">
-      <Header />
+      {onClickCart ? <Cart closeCart={closeCart} /> : null}
+      <Header openCart={openCart} />
       <Sliders />
       <div className="categories">
         {Categoris.map((obj, i) => {
