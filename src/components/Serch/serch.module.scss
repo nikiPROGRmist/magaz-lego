@@ -1,0 +1,23 @@
+.serch__menu{
+    width: 250px;
+    height: 50px;
+    border: 1px solid #778899;
+    border-radius: 8px;
+    display: flex;
+    text-align: center;
+
+    .serch__img{
+        margin: 0 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input{
+        width: 100%;
+        outline: none;
+        border: none;
+    }
+
+
+}

@@ -1,54 +1,45 @@
 import "./App.css";
-import { Card } from "./components/card/Card";
 import { Cart } from "./components/Cart/Cart";
-import { Header } from "./components/Header/Header";
-import { Sliders } from "./components/Slider/Slider";
-import { Categories } from "./components/Сategories/Categories";
-import Categoris from "./assets/Categoris.json";
-import legoCart from "./assets/legoCart.json";
+import { Home } from "./components/Home/home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import { Footer } from "./components/Footer/Footer";
+import axios from "axios";
 
 function App() {
-  const [caregoris, setCategoris] = useState(0);
-  const [onClickCart, setOnClickCart] = useState(false);
-  const [onClickClose, setOnClickClose] = useState(true);
+  const [displayCart, setDisplayCart] = useState([]);
 
-  const openCart = () => {
-    setOnClickCart(true);
+  const removeCart = (id) => {
+    console.log(id);
+    axios.delete(`https://63f881ad1dc21d5465c0cd00.mockapi.io/cart/${id}`);
+    setDisplayCart(displayCart.filter((item) => item.id !== id));
   };
 
-  const closeCart = () => {
-    setOnClickCart(false);
+  const object = (obj) => {
+    console.log(obj);
   };
   return (
-    <div className="wrapper">
-      {onClickCart ? <Cart closeCart={closeCart} /> : null}
-      <Header openCart={openCart} />
-      <Sliders />
-      <div className="categories">
-        {Categoris.map((obj, i) => {
-          return (
-            <Categories
-              categoris={caregoris}
-              img={obj.img}
-              text={obj.text}
-              index={i}
-              setCategoris={setCategoris}
-            />
-          );
-        })}
+    <BrowserRouter>
+      <div className="wrapper">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home object={object} setDisplayCart={setDisplayCart} displayCart={displayCart} />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                removeCart={removeCart}
+                setDisplayCart={setDisplayCart}
+                displayCart={displayCart}
+              />
+            }
+          />
+        </Routes>
       </div>
-
-      <div className="card__items">
-        {legoCart.map((obj) => {
-          return (
-            <Card image={obj.image} product={obj.product} title={obj.title} price={obj.price} />
-          );
-        })}
-        <Footer />
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
