@@ -1,9 +1,18 @@
+
+.basket__title{
+    display: block;
+    text-align: center;
+}
+
+
 .basket{
 width: 1080px;
-height: 800px;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
+min-height: 700px;
+position: relative;
+
+
+
+
 
 
 
@@ -24,14 +33,45 @@ flex-wrap: wrap;
     }
 
 
+    .pay__btn{
+        background: #9DD458;
+        width: 245px;
+        height: 55px;
+        padding: 5px;
+        border-radius: 18px;
+        border: none;
+        color: #fff;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+
+
+    }
+
+    .pay__item{
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        z-index: 1;
+
+    }
+
+    .sum__title{
+        text-align: center;
+        margin: 3px auto;
+    }
+
 
     .img__item{
         display: flex;
         justify-content: center;
         margin: 10px auto;
         align-items: center;
-        width: 200px;
-        height: 320px;
+        width: 100px;
+        height: 150px;
 
 
         img{
@@ -91,13 +131,16 @@ flex-wrap: wrap;
 
         .cart__item{
           position: relative;
-          width: 320px;
-          height: 430px;
+          display: flex;
+          align-items: center;
+          width: 800px;
+          height: 170px;
           background: #FFFFFF;
           border: 3px solid #F3F3F3;
           border-radius: 40px;
           cursor: pointer;
-          margin:  60px 10px 0;
+          margin: 20px auto;
+
 }
 
 .menu__item{
@@ -105,6 +148,10 @@ flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 
+}
+
+.price__menu{
+    margin: 0 50px;
 }
 
 .cart__count{
@@ -140,6 +187,52 @@ letter-spacing: 0.01em;
 color: #000000;
 }
 
+}
+
+// empty cart
+
+.cart__empty{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+    h2{
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+    }
+    .button{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        background: #9DD458;
+        width: 245px;
+        height: 55px;
+        padding: 5px;
+        border-radius: 18px;
+    }
+
+    .title{
+        border: none;
+        color: #fff;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding-right: 40px;
+
+
+    }
 }
 
 
