@@ -14,6 +14,7 @@ function App() {
   const [onCaregoris, setOnCategoris] = useState(0);
   const [onSerch, setOnSerch] = useState("");
   const [loadCard, setLoadCard] = useState([]);
+
   const [favoriteCard, setFavoriteCard] = useState(
     JSON.parse(window.localStorage.getItem("favorite")) || [],
   );
@@ -86,11 +87,21 @@ function App() {
                 removeCart={removeCart}
                 setDisplayCart={setDisplayCart}
                 displayCart={displayCart}
+                favorited
               />
             }
           />
 
-          <Route path="/favorite" element={<Favorite favoriteCard={favoriteCard} />} />
+          <Route
+            path="/favorite"
+            element={
+              <Favorite
+                favoriteCard={favoriteCard}
+                setFavoriteCard={setFavoriteCard}
+                postFavorite={postFavorite}
+              />
+            }
+          />
         </Routes>
       </div>
     </BrowserRouter>

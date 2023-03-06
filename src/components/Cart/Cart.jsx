@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import style from "./cart.module.scss";
 
-export const Cart = ({ displayCart, removeCart, setDisplayCart }) => {
+export const Cart = ({ displayCart, removeCart, favorited }) => {
   const [count, setCount] = useState(0);
 
   const onClickPlus = () => {

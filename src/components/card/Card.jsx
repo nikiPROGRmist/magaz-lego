@@ -1,9 +1,21 @@
 import { useState } from "react";
 import style from "./card.module.scss";
 
-export const Card = ({ isAdded, id, image, product, title, price, onPlus, onFavorite }) => {
-  const [onClickBtn, setOnClickBtn] = useState(isAdded);
-  const [onClickFavorite, setOnClickFavorite] = useState(false);
+export const Card = ({
+  isAdded,
+  id,
+  image,
+  product,
+  title,
+  price,
+  onPlus,
+  onFavorite,
+  favorited,
+  isFavorite,
+  isCart,
+}) => {
+  const [onClickBtn, setOnClickBtn] = useState(isAdded || isCart);
+  const [onClickFavorite, setOnClickFavorite] = useState(isFavorite || favorited);
 
   const onBtnCard = () => {
     onPlus({ image, title, price, id });

@@ -15,8 +15,7 @@ export const Home = ({
   setOnCategoris,
   setOnSerch,
   onCaregoris,
-  setOnClickFavorite,
-  OnClickFavorite,
+  favoriteCard,
   setFavoriteCard,
   postFavorite,
 }) => {
@@ -51,11 +50,9 @@ export const Home = ({
                 onPlus={(obj) => postCart(obj)}
                 onFavorite={(obj) => postFavorite(obj)}
                 setDisplayCart={setDisplayCart}
-                displayCart={displayCart}
-                OnClickFavorite={OnClickFavorite}
-                setOnClickFavorite={setOnClickFavorite}
                 setFavoriteCard={setFavoriteCard}
                 isAdded={displayCart.some((item) => item.id === obj.id)}
+                isFavorite={favoriteCard.some((item) => item.id === obj.id)}
               />
             );
           })}
