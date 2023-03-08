@@ -5,6 +5,7 @@ import { Serch } from "../components/Serch/serch";
 import { Sliders } from "../components/Slider/Slider";
 import { Categories } from "../components/Сategories/Categories";
 import Categoris from "../assets/Categoris.json";
+import legoCart from "../assets/legoCart.json";
 
 export const Home = ({
   postCart,

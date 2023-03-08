@@ -4,7 +4,8 @@
         "image":"/img/1.webp",
         "product":"Эксклюзивная продукция",
         "title":"«Титаник» LEGO®",
-        "price":"5990 руб"
+        "categories":"3",
+        "price":"5990"
 
     },
     {
@@ -12,266 +13,283 @@
         "image":"/img/2.webp",
         "product":"Эксклюзивная продукция",
         "title":"Колизей",
-        "price":"5990 руб"
+        "categories":"3",
+        "price":"5990"
 
     },
-    {
+    { "id":"3",
         "image":"/img/3.webp",
         "product":"Эксклюзивная продукция",
         "title":"Косой переулок",
-        "price":"5990 руб"
+        "categories":"3",
+        "price":"5990"
     },
     {
         "id":"4",
         "image":"/img/4.png",
         "product":"Редкие товары",
         "title":"AT-AT™",
-        "price":"5990 руб"
+        "categories":"5",
+        "price":"5990"
     },
     {
         "id":"5",
         "image":"/img/5.webp",
         "product":"Редкие товары",
         "title":"Нападение на мастерскую паука",
-        "price":"5990 руб"
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"6",
         "image":"/img/6.webp",
         "product":"Редкие товары",
         "title":"Home Alone LEGO® Ideas",
-        "price":"5990 руб"
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"7",
         "image":"/img/7.jpeg",
-        "product":"Редкие товары",
+        "product":"Эксклюзивная продукция",
         "title":"Автомобиль Охотников за привидениями ECTO-1",
-        "price":"5990 руб"
+        "categories":"3",
+        "price":"5990"
     },
     {
         "id":"8",
         "image":"/img/8.jpeg",
         "product":"Редкие товары",
         "title":"«Мстители: Финал» — решающая битва",
-        "price":"5990 руб"
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"9",
         "image":"/img/9.jpeg",
         "product":"Редкие товары",
         "title":"«Взлёт Домо» LEGO® Marvel",
-        "price":"5990 руб"
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"10",
         "image":"/img/10.jpeg",
         "product":"Редкие товары",
         "title":"Новогодний календарь «Мстители» LEGO® Marvel",
-        "price":"5990 руб"
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"11",
         "image":"/img/11.jpeg",
         "product":"Редкие товары",
         "title":"Нападение на мастерскую паука",
-        "price":"5990 руб"
+        "categories":"2",
+        "price":"5990"
     },
 
     {
         "id":"12",
         "image":"/img/12.png",
-        "product":"Редкие товары",
+        "product":"Эксклюзивная продукция",
         "title":"Fender® Stratocaster™ LEGO® Ideas",
-        "price":"5990 руб"
+        "categories":"3",
+        "price":"5990"
     },
+
     {
         "id":"13",
-        "image":"/img/13.webp",
-        "product":"Редкие товары",
-        "title":"Lamborghini Sián FKP 37",
-        "price":"5990 руб"
+        "image":"/img/15.webp",
+        "product":"Эксклюзивная продукция",
+        "title":"Porsche 911",
+        "categories":"3",
+        "price":"5990"
     },
     {
         "id":"14",
-        "image":"/img/14.jpeg",
-        "product":"Редкие товары",
-        "title":"Nintendo Entertainment System™",
-        "price":"5990 руб"
-    },
-    {
-        "id":"15",
-        "image":"/img/15.webp",
-        "product":"Редкие товары",
-        "title":"Porsche 911",
-        "price":"5990 руб"
-    },
-    {
-        "id":"16",
         "image":"/img/16.jpeg",
         "product":"Редкие товары",
         "title":"R2-D2™",
-        "price":"5990 руб"
+        "categories":"5",
+        "price":"5990"
+    },
+
+    {
+        "id":"15",
+        "image":"/img/18.png",
+        "product":"Эксклюзивная продукция",
+        "title":"«Блок «Знак вопроса» из Super Mario 64™»",
+        "categories":"3",
+        "price":"5990"
+    },
+    {
+        "id":"16",
+        "image":"/img/19.jpeg",
+        "product":"",
+        "title":"«Боевой корабль Республики»",
+        "categories":"5",
+        "price":"5990"
     },
     {
         "id":"17",
-        "image":"/img/17.png",
-        "product":"Редкие товары",
-        "title":"«Сантьяго Бернабеу» — стадион ФК «Реал Мадрид»",
-        "price":"5990 руб"
+        "image":"/img/20.png",
+        "product":"",
+        "title":"«Бутик-отель»",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"18",
-        "image":"/img/18.png",
-        "product":"Редкие товары",
-        "title":"«Блок «Знак вопроса» из Super Mario 64™»",
-        "price":"5990 руб"
+        "image":"/img/21.jpeg",
+        "product":"",
+        "title":"«В ожидании Санты»",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"19",
-        "image":"/img/19.jpeg",
-        "product":"Редкие товары",
-        "title":"«Боевой корабль Республики»",
-        "price":"5990 руб"
+        "image":"/img/22.jpeg",
+        "product":"",
+        "title":"«Винни Пух»",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"20",
-        "image":"/img/20.png",
-        "product":"Редкие товары",
-        "title":"«Бутик-отель»",
-        "price":"5990 руб"
+        "image":"/img/23.png",
+        "product":"Эксклюзивная продукция",
+        "title":"«Глобус»",
+        "categories":"3",
+        "price":"5990"
     },
     {
         "id":"21",
-        "image":"/img/21.jpeg",
-        "product":"Редкие товары",
-        "title":"«В ожидании Санты»",
-        "price":"5990 руб"
+        "image":"/img/24.jpeg",
+        "product":"",
+        "title":"«Железный человек» Marvel Studio»",
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"22",
-        "image":"/img/22.jpeg",
-        "product":"Редкие товары",
-        "title":"«Винни Пух»",
-        "price":"5990 руб"
+        "image":"/img/25.jpeg",
+        "product":"",
+        "title":"Битва за башню Мстителей",
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"23",
-        "image":"/img/23.png",
-        "product":"Редкие товары",
-        "title":"«Глобус»",
-        "price":"5990 руб"
+        "image":"/img/26.jpeg",
+        "product":"",
+        "title":"Веном",
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"24",
-        "image":"/img/24.jpeg",
-        "product":"Редкие товары",
-        "title":"«Железный человек» Marvel Studio»",
-        "price":"5990 руб"
+        "image":"/img/27.jpeg",
+        "product":"",
+        "title":"Капитан Америка: Роботеном",
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"25",
-        "image":"/img/25.jpeg",
-        "product":"Редкие товары",
-        "title":"Битва за башню Мстителей",
-        "price":"5990 руб"
+        "image":"/img/28.png",
+        "product":"",
+        "title":"Молот Тора",
+        "categories":"2",
+        "price":"5990"
     },
     {
         "id":"26",
-        "image":"/img/26.jpeg",
-        "product":"Редкие товары",
-        "title":"Веном",
-        "price":"5990 руб"
-    },
-    {
-        "id":"27",
-        "image":"/img/27.jpeg",
-        "product":"Редкие товары",
-        "title":"Капитан Америка: Роботеном",
-        "price":"5990 руб"
-    },
-    {
-        "id":"28",
-        "image":"/img/28.png",
-        "product":"Редкие товары",
-        "title":"Молот Тора",
-        "price":"5990 руб"
-    },
-    {
-        "id":"29",
         "image":"/img/29.jpeg",
         "product":"Эксклюзивная продукция",
         "title":"Рождественский пингвин",
-        "price":"5990 руб"
+        "categories":"4",
+        "price":"5990"
     },
     {
-        "id":"30",
+        "id":"27",
         "image":"/img/30.webp",
         "product":"Эксклюзивная продукция",
         "title":"Робот-изобретатель",
-        "price":"5990 руб"
+        "categories":"5",
+        "price":"5990"
+    },
+    {
+        "id":"28",
+        "image":"/img/31.jpeg",
+        "product":"",
+        "title":"«Новогодний календарь» LEGO® Star Wars™",
+        "categories":"5",
+        "price":"5990"
+    },
+    {
+        "id":"29",
+        "image":"/img/32.png",
+        "product":"",
+        "title":"AT-ST™ на Хоте",
+        "categories":"5",
+        "price":"5990"
+    },
+    {
+        "id":"30",
+        "image":"/img/33.jpeg",
+        "product":"",
+        "title":"Адвент календарь LEGO® Friends",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"31",
-        "image":"/img/31.jpeg",
-        "product":"Редкие товары",
-        "title":"«Новогодний календарь» LEGO® Star Wars™",
-        "price":"5990 руб"
+        "image":"/img/34.png",
+        "product":"",
+        "title":"Клиника для домашних животных",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"32",
-        "image":"/img/32.png",
-        "product":"Редкие товары",
-        "title":"AT-ST™ на Хоте",
-        "price":"5990 руб"
+        "image":"/img/35.png",
+        "product":"",
+        "title":"Пляжный дом для отдыха",
+        "categories":"4",
+        "price":"5990"
     },
     {
         "id":"33",
-        "image":"/img/33.jpeg",
-        "product":"Редкие товары",
-        "title":"Адвент календарь LEGO® Friends",
-        "price":"5990 руб"
+        "image":"/img/36.jpeg",
+        "product":"",
+        "title":"Гарри Поттер и Гермиона Грейнджер",
+        "categories":"6",
+        "price":"5990"
     },
     {
         "id":"34",
-        "image":"/img/34.png",
-        "product":"Редкие товары",
-        "title":"Клиника для домашних животных",
-        "price":"5990 руб"
-    },
-    {
-        "id":"35",
-        "image":"/img/35.png",
-        "product":"Редкие товары",
-        "title":"Пляжный дом для отдыха",
-        "price":"5990 руб"
-    },
-    {
-        "id":"36",
-        "image":"/img/36.jpeg",
-        "product":"Редкие товары",
-        "title":"Гарри Поттер и Гермиона Грейнджер",
-        "price":"5990 руб"
-    },
-    {
-        "id":"37",
         "image":"/img/37.jpeg",
         "product":"Редкие товары",
         "title":"Harry Potter™ Hogwarts™ Crests",
-        "price":"5990 руб"
+        "categories":"6",
+        "price":"5990"
     },
     {
-        "id":"38",
+        "id":"35",
         "image":"/img/38.jpeg",
-        "product":"Редкие товары",
+        "product":"",
         "title":"«Новогодний календарь» LEGO® Harry Potter™",
-        "price":"5990 руб"
+        "categories":"6",
+        "price":"5990"
     },
     {
-        "id":"39",
+        "id":"36",
         "image":"/img/39.png",
         "product":"Редкие товары",
         "title":"Символы Хогвартса: коллекционное издание",
-        "price":"5990 руб"
+        "categories":"6",
+        "price":"5990"
+
     }
 ]

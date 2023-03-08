@@ -64,7 +64,7 @@ export const Card = ({
           )}
         </div>
       </div>
-      <div className={style.title}>{product}</div>
+      {product ? <div className={style.title}>{product}</div> : null}
 
       <div className={style.text}>{title}</div>
       <div className={style.text__item}>

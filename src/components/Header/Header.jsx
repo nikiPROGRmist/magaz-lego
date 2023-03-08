@@ -2,7 +2,7 @@ import React from "react";
 import style from "../Header/header.module.scss";
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ display }) => {
   return (
     <>
       <header>
@@ -47,7 +47,7 @@ export const Header = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>1205 руб</span>
+                <span>{display}</span>
               </Link>
             </li>
 

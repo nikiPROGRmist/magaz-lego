@@ -28,10 +28,16 @@ function App() {
   }, [favoriteCard]);
 
   useEffect(() => {
-    axios.get("https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card").then((res) => {
-      setLoadCard(res.data);
-    });
-  }, []);
+    axios
+      .get(
+        `https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card${
+          onCaregoris !== 0 ? `?categories=${onCaregoris}` : ""
+        }`,
+      )
+      .then((res) => {
+        setLoadCard(res.data);
+      });
+  }, [onCaregoris]);
 
   const postCart = (obj) => {
     if (displayCart.find((item) => item.id === obj.id)) {
@@ -47,6 +53,12 @@ function App() {
     }
   };
 
+  const delCart = () => {
+    setDisplayCart(displayCart.filter((item) => item.length));
+  };
+
+  const display = displayCart.reduce((sum, item) => Number(item.price) + sum, 0);
+
   const postFavorite = (obj) => {
     console.log(obj.id);
     if (favoriteCard.find((item) => item.id === obj.id)) {
@@ -59,7 +71,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="wrapper">
-        <Header />
+        <Header display={display} />
         <Routes>
           <Route
             path="/"
@@ -84,10 +96,12 @@ function App() {
             exact
             element={
               <Cart
+                delCart={delCart}
                 removeCart={removeCart}
                 setDisplayCart={setDisplayCart}
                 displayCart={displayCart}
                 favorited
+                display={display}
               />
             }
           />

@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 import style from "./cart.module.scss";
 
-export const Cart = ({ displayCart, removeCart, favorited }) => {
+export const Cart = ({ displayCart, removeCart, delCart, display }) => {
   const [count, setCount] = useState(0);
+  const [isOrderComplete, setIsOrderComplete] = useState(false);
 
   const onClickPlus = () => {
     setCount(count + 1);
@@ -14,6 +15,11 @@ export const Cart = ({ displayCart, removeCart, favorited }) => {
     if (count > 0) {
       setCount(count - 1);
     }
+  };
+
+  const displayOrder = () => {
+    setIsOrderComplete(true);
+    delCart();
   };
 
   {
@@ -87,17 +93,19 @@ export const Cart = ({ displayCart, removeCart, favorited }) => {
               })}
               <div className={style.pay__item}>
                 <div className={style.sum__title}>
-                  <span>Сумма заказа: 900 ₽</span>
+                  <span>Сумма заказа: {display} ₽</span>
                 </div>
-                <button className={style.pay__btn}>Оплатить</button>
+                <button onClick={displayOrder} className={style.pay__btn}>
+                  Оплатить
+                </button>
               </div>
             </>
           ) : (
             <>
               <div className={style.cart__empty}>
                 <div className={style.emty__blog}>
-                  <img src="/img/empty.png" alt="empty" />
-                  <h2>Корзина пустая</h2>
+                  <img src={isOrderComplete ? "/img/order.png" : "/img/empty.png"} alt="empty" />
+                  <h2>{isOrderComplete ? "Заказ оформлен" : "Корзина пустая"}</h2>
                   <Link to="/">
                     <div className={style.button}>
                       <svg
