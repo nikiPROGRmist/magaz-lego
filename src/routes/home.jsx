@@ -1,11 +1,12 @@
 import React from "react";
 import { Card } from "../components/card/Card";
 import { Footer } from "../components/Footer/Footer";
-import { Serch } from "../components/Serch/serch";
+// import { Serch } from "../components/Serch/serch";
 import { Sliders } from "../components/Slider/Slider";
 import { Categories } from "../components/Сategories/Categories";
-import Categoris from "../assets/Categoris.json";
-import legoCart from "../assets/legoCart.json";
+
+// import legoCart from "../assets/legoCart.json";
+import ReactPaginate from "react-paginate";
 
 export const Home = ({
   postCart,
@@ -13,32 +14,18 @@ export const Home = ({
   onSerch,
   setDisplayCart,
   displayCart,
-  setOnCategoris,
-  setOnSerch,
-  onCaregoris,
   favoriteCard,
   setFavoriteCard,
   postFavorite,
+  setCurrentPaginate,
 }) => {
   return (
     <>
       <Sliders />
       <div className="categories">
-        {Categoris.map((obj, i) => {
-          return (
-            <Categories
-              onCaregoris={onCaregoris}
-              setOnCategoris={setOnCategoris}
-              key={i}
-              img={obj.img}
-              text={obj.text}
-              index={i}
-              object={obj}
-            />
-          );
-        })}
+        <Categories />
       </div>
-      {/* <Serch setOnSerch={setOnSerch} /> */}
+      {/* <Serch /> */}
 
       <div className="card__items">
         {loadCard
@@ -58,6 +45,17 @@ export const Home = ({
             );
           })}
       </div>
+
+      <ReactPaginate
+        className="paginate"
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={(event) => setCurrentPaginate(event.selected + 1)}
+        pageRangeDisplayed={3}
+        pageCount={6}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+      />
 
       <Footer />
     </>

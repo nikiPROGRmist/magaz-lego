@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SerchContext } from "../../App";
 import style from "./serch.module.scss";
 
-export const Serch = ({ setOnSerch }) => {
+export const Serch = () => {
+  const { setOnSerch } = useContext(SerchContext);
+
   const cahangeValue = (e) => {
     setOnSerch(e.target.value);
   };

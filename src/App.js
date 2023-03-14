@@ -6,12 +6,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Header } from "./components/Header/Header";
 import { Favorite } from "./routes/favorite";
+import { useSelector } from "react-redux";
 
 function App() {
+  const [currentPaginate, setCurrentPaginate] = useState(1);
   const [displayCart, setDisplayCart] = useState(
     JSON.parse(window.localStorage.getItem("items")) || [],
   );
-  const [onCaregoris, setOnCategoris] = useState(0);
+  // const [onCaregoris, setOnCategoris] = useState(0);
+  const categoriesActive = useSelector((state) => state.filter.value);
+
   const [onSerch, setOnSerch] = useState("");
   const [loadCard, setLoadCard] = useState([]);
 
@@ -30,14 +34,14 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card${
-          onCaregoris !== 0 ? `?categories=${onCaregoris}` : ""
+        `https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card?page=${currentPaginate}&limit=6${
+          categoriesActive !== 0 ? `&categories=${categoriesActive}` : ""
         }`,
       )
       .then((res) => {
         setLoadCard(res.data);
       });
-  }, [onCaregoris]);
+  }, [currentPaginate, categoriesActive]);
 
   const postCart = (obj) => {
     if (displayCart.find((item) => item.id === obj.id)) {
@@ -77,15 +81,14 @@ function App() {
             path="/"
             element={
               <Home
+                categoriesActive={categoriesActive}
+                setCurrentPaginate={setCurrentPaginate}
                 postFavorite={postFavorite}
                 postCart={postCart}
                 loadCard={loadCard}
                 onSerch={onSerch}
                 setDisplayCart={setDisplayCart}
                 displayCart={displayCart}
-                setOnCategoris={setOnCategoris}
-                setOnSerch={setOnSerch}
-                onCaregoris={onCaregoris}
                 favoriteCard={favoriteCard}
                 setFavoriteCard={setFavoriteCard}
               />
