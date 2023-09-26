@@ -47,7 +47,7 @@ export const Header = ({ display, favoriteCard }) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <a href=""> {display}</a>
+                <a href=""> {display} ₽</a>
               </Link>
             </li>
 
