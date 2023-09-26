@@ -1,36 +1,67 @@
 .container{
     margin: 45px 60px;
 
-    img{
-      border-radius: 20px;
+    @media (max-width:600px) {
+      display: none;
     }
+
+
+    .slick-slider{
+      display: flex;
+      align-items: center;
+
+
+    }
+
+    .slick-list{
+      border-radius: 26px;
+      height: auto;
+      height: 305px;
+    }
+
+
 
     .slider-one{
       background-image: url("../../../public/img/slider1.png");
       width: 960px;
-      height: 300px;
-      border-radius: 20px;
+      height: 310px;
+      //
+    }
+
+    .slick-arrow{
+
+    }
+
+    .slick-next{
+background-color:rgb(44, 44, 44);
+border-radius: 50%;
+    }
+
+    .slick-prev{
+background-color:rgb(44, 44, 44); ;
+border-radius: 50%;
+
     }
 
     .slider-two{
-      background-image: url("../../../public/img/slider1.png");
+      background-image: url("../../../public/img/slider2.png");
       width: 960px;
-      height: 300px;
-      border-radius: 20px;
+      height: 310px;
+      ;
     }
     .slider-free{
-      background-image: url("../../../public/img/slider1.png");
+      background-image: url("../../../public/img/slider3.png");
       width: 960px;
-      height: 300px;
-      border-radius: 20px;
+      height: 310px;
+
     }
     .slider__btn-one{
       position: relative;
-      top: 70%;
-      left: 10%;
+      top: 74%;
+      left: 8%;
       z-index: 1;
-      width: 178px;
-      height: 50px;
+      width: 160px;
+      height: 45px;
       border-radius: 110px;
       background: #A5D364;
       border: none;
@@ -44,49 +75,8 @@
 
 
 
-    }
-    .slider__btn-two{
-      position: relative;
-      top: 70%;
-      left: 60%;
-      z-index: 1;
-      width: 178px;
-      height: 50px;
-      border-radius: 110px;
-      background: #A5D364;
-      border: none;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 17px;
-      line-height: 19px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FFFFFF;
-
-
 
     }
-    .slider__btn-free{
-      position: relative;
-      top: 70%;
-      left: 10%;
-      z-index: 1;
-      width: 178px;
-      height: 50px;
-      border-radius: 110px;
-      background: #A5D364;
-      border: none;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 17px;
-      line-height: 19px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FFFFFF;
 
 
-
-    }
   }

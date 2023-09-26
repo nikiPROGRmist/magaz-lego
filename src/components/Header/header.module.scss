@@ -23,15 +23,21 @@ header{
     }
 
     h1{
+        text-align: left;
         font-size: 25px;
         margin: 0;
         font-weight:900;
         text-transform: uppercase;
+
+
     }
 
     p{
         font-size: 15px;
         margin: 0;
+        @media (max-width:600px) {
+            font-size: 10px;
+                }
 
 
     }
@@ -40,20 +46,34 @@ header{
 .headerRight{
     margin: 20px;
 
+    @media (max-width:400px) {
+        margin: 5px;
+    }
+
+
 
     ul{
         display: flex;
         align-items: center;
     }
-    .header_1{
-        margin: 0 20px;
-    }
+
     li{
         display: flex;
         align-items: center;
     }
 
-    span{
-        margin: 0 20px 0 20px;
+    a{
+       margin: 10px;
+       font-size: 20px;
+       text-decoration: none;
+       color: #9B9B9B;
+
     }
+
+
+}
+
+.svg__favorite{
+    fill: rgb(255, 133, 133);
+    ;
 }

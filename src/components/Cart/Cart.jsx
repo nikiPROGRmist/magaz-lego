@@ -85,7 +85,7 @@ export const Cart = ({ displayCart, removeCart, delCart, display }) => {
                       </div>
                       <div className={style.price__menu}>
                         <div className={style.cart__price}>цена:</div>
-                        <div className={style.price}>{item.price}</div>
+                        <div className={style.price}>{item.price} руб</div>
                       </div>
                     </div>
                   </>
@@ -95,6 +95,7 @@ export const Cart = ({ displayCart, removeCart, delCart, display }) => {
                 <div className={style.sum__title}>
                   <span>Сумма заказа: {display} ₽</span>
                 </div>
+                <div className={style.btn__menu}></div>
                 <button onClick={displayOrder} className={style.pay__btn}>
                   Оплатить
                 </button>

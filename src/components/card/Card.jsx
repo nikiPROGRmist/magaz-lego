@@ -141,7 +141,7 @@ export const Card = ({
         </div>
 
         <div className={style.price__title}>Цена:</div>
-        <div className={style.price}>{price}</div>
+        <div className={style.price}>{price} руб</div>
       </div>
     </div>
   );

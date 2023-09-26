@@ -1,27 +1,37 @@
-import "./App.css";
 import { Cart } from "./components/Cart/Cart";
 import { Home } from "./routes/home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Header } from "./components/Header/Header";
 import { Favorite } from "./routes/favorite";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { SetOnSort } from "./redux/slices/categorieSlice";
+import qs from "qs";
 
 function App() {
-  const [currentPaginate, setCurrentPaginate] = useState(1);
+  const navigate = useNavigate();
   const [displayCart, setDisplayCart] = useState(
     JSON.parse(window.localStorage.getItem("items")) || [],
   );
-  // const [onCaregoris, setOnCategoris] = useState(0);
-  const categoriesActive = useSelector((state) => state.filter.value);
-
-  const [onSerch, setOnSerch] = useState("");
+  const { value, sortType, sort, paginate } = useSelector((state) => state.filter);
+  const dispath = useDispatch();
+  const { search } = useSelector((state) => state.search);
   const [loadCard, setLoadCard] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const [favoriteCard, setFavoriteCard] = useState(
     JSON.parse(window.localStorage.getItem("favorite")) || [],
   );
+
+  useEffect(() => {
+    if (window.location.search) {
+      const params = qs.parse(window.location.search.substring(1));
+      console.log(params);
+    }
+  }, []);
 
   useEffect(() => {
     window.localStorage.setItem("items", JSON.stringify(displayCart));
@@ -34,14 +44,27 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card?page=${currentPaginate}&limit=6${
-          categoriesActive !== 0 ? `&categories=${categoriesActive}` : ""
+        `https://63f881ad1dc21d5465c0cd00.mockapi.io/lego-card?search=${search}&sortBy=${sortType.sortProperty.replace(
+          "-",
+          "",
+        )}&order=${sortType.sortProperty.includes("-") ? "desc" : "asc"}&page=${paginate}&limit=6${
+          value !== 0 ? `&categories=${value + 1}` : ""
         }`,
       )
       .then((res) => {
         setLoadCard(res.data);
+        setIsLoading(false);
       });
-  }, [currentPaginate, categoriesActive]);
+  }, [paginate, value, sortType.sortProperty, search]);
+
+  useEffect(() => {
+    const StrQs = qs.stringify({
+      paginate: paginate,
+      value: value,
+      sortType: sortType.sortProperty,
+    });
+    navigate(`?${StrQs}`);
+  }, [paginate, value, sortType.sortProperty, search]);
 
   const postCart = (obj) => {
     if (displayCart.find((item) => item.id === obj.id)) {
@@ -73,20 +96,18 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <div className="overlay" onClick={sort ? () => dispath(SetOnSort(!sort)) : ""}>
       <div className="wrapper">
-        <Header display={display} />
+        <Header display={display} favoriteCard={favoriteCard} />
         <Routes>
           <Route
             path="/"
             element={
               <Home
-                categoriesActive={categoriesActive}
-                setCurrentPaginate={setCurrentPaginate}
+                isLoading={isLoading}
                 postFavorite={postFavorite}
                 postCart={postCart}
                 loadCard={loadCard}
-                onSerch={onSerch}
                 setDisplayCart={setDisplayCart}
                 displayCart={displayCart}
                 favoriteCard={favoriteCard}
@@ -121,7 +142,7 @@ function App() {
           />
         </Routes>
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 

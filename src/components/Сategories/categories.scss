@@ -5,6 +5,12 @@
   max-width: 950px;
   margin:  0 auto;
 
+  @media (max-width:940px) {
+    flex-wrap: wrap;
+    margin: 20px auto 0;
+
+  }
+
 img{
   display: block;
   margin: 0 auto;
